@@ -23,13 +23,4 @@ const VideoPlayer = function ({ link }: VideoPlayerProps) {
   )
 }
 
-const Controls = function ({ img, name }: { img: string; name: string }) {
-  return (
-    <button>
-      <img src={img} alt={name} />
-      <span>{name}</span>
-    </button>
-  )
-}
-
 export default VideoPlayer
