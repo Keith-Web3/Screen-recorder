@@ -8,11 +8,14 @@ interface NewVideoProps {
 }
 
 const NewVideo = async function ({ params }: NewVideoProps) {
-  console.log(params['video-id'])
-  const res = await fetch(
-    `https://hng-chrome.onrender.com/video/${params['video-id']}`
-  )
-  const { title, fileUrl } = await res.json()
+  // const res = await fetch(
+  //   `https://hng-chrome.onrender.com/video/${params['video-id']}`
+  // )
+  // const { title, fileUrl } = await res.json()
+  const { title, fileUrl } = {
+    title: 'placeholder title, backend down',
+    fileUrl: 'placeholder-url',
+  }
 
   return (
     <div className="new-video-page">
