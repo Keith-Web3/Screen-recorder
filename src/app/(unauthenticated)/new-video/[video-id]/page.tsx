@@ -4,8 +4,6 @@ import ShareVideo from '../(components)/ShareVideoBtn'
 import VideoPlayer from '../(components)/VideoPlayer'
 
 interface NewVideoProps {
-  videoTitle: string
-  videoUrl: string
   params: { 'video-id': string }
 }
 
