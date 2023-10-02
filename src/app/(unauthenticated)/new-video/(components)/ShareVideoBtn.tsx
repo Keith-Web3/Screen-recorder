@@ -8,7 +8,7 @@ interface ShareVideoProps {
 const ShareVideo = function ({ logo, name }: ShareVideoProps) {
   return (
     <button>
-      <Image src={logo} alt={name + '-logo'} />
+      <Image width={30} height={30} src={logo} alt={name + '-logo'} />
       <span>{name}</span>
     </button>
   )

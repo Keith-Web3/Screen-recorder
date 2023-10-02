@@ -5,6 +5,9 @@ body {
 }
 .header {
   grid-area: header;
+  img {
+    width: 100px;
+  }
   @media (min-width: 940px) {
     margin-bottom: 2em;
   }

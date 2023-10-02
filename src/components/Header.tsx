@@ -7,7 +7,7 @@ interface HeaderProps {
 const Header = function ({ addExtras }: HeaderProps) {
   return (
     <header className="header font-sora flex items-center mb-4 justify-between">
-      <Image src="/logo-2.png" alt="logo" />
+      <Image width={100} height={100} src="/logo-2.png" alt="logo" />
       {addExtras && (
         <div className="flex items-center gap-8">
           <p className="capitalize font-medium">features</p>

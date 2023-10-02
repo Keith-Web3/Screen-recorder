@@ -50,12 +50,8 @@ const NewVideo = async function ({ params }: NewVideoProps) {
           >
             {fileUrl || 'file-url'}
           </p>
-          <button
-            onClick={async () => {
-              await navigator.clipboard.writeText(fileUrl)
-            }}
-          >
-            <Image src="/copy.svg" alt="copy-link" />
+          <button>
+            <Image width={30} height={30} src="/copy.svg" alt="copy-link" />
             <span>
               Copy <span>video link</span>
             </span>
