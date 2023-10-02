@@ -42,12 +42,16 @@ const NewVideo = async function ({ params }: NewVideoProps) {
         </h2>
         <div>
           <p
-            title=" https://www.helpmeout/Untitled_Video_20232509"
+            title={fileUrl}
             className=" overflow-hidden whitespace-nowrap overflow-ellipsis"
           >
             {fileUrl || 'file-url'}
           </p>
-          <button>
+          <button
+            onClick={async () => {
+              await navigator.clipboard.writeText(fileUrl)
+            }}
+          >
             <Image src="/copy.svg" alt="copy-link" />
             <span>
               Copy <span>video link</span>
