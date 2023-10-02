@@ -7,14 +7,19 @@ interface NewVideoProps {
   params: { 'video-id': string }
 }
 
-const NewVideo = function ({ params }: NewVideoProps) {
+const NewVideo = async function ({ params }: NewVideoProps) {
   console.log(params['video-id'])
+  const res = await fetch(
+    `https://hng-chrome.onrender.com/video/${params['video-id']}`
+  )
+  const { title, fileUrl } = await res.json()
+
   return (
     <div className="new-video-page">
       <h1 className="font-sora text-4xl font-semibold text-[#141414] video-ready">
         Your video is ready!
       </h1>
-      <FileName fileName={'recorded video'} />
+      <FileName fileName={title} />
       <div className="divider"></div>
       <label
         htmlFor="email"
@@ -40,7 +45,7 @@ const NewVideo = function ({ params }: NewVideoProps) {
             title=" https://www.helpmeout/Untitled_Video_20232509"
             className=" overflow-hidden whitespace-nowrap overflow-ellipsis"
           >
-            https://www.helpmeout/Untitled_Video_20232509
+            {fileUrl || 'file-url'}
           </p>
           <button>
             <Image src="/copy.svg" alt="copy-link" />
@@ -58,7 +63,7 @@ const NewVideo = function ({ params }: NewVideoProps) {
         <ShareVideo logo="/whatsapp.svg" name="WhatsApp" />
         <ShareVideo logo="/telegram.svg" name="Telegram" />
       </section>
-      <VideoPlayer link={params['video-id']} />
+      <VideoPlayer link={fileUrl} />
     </div>
   )
 }
