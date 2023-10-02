@@ -9,14 +9,14 @@ interface NewVideoProps {
   params: { 'video-id': string }
 }
 
-const NewVideo = function ({ videoTitle, videoUrl, params }: NewVideoProps) {
+const NewVideo = function ({ params }: NewVideoProps) {
   console.log(params['video-id'])
   return (
     <div className="new-video-page">
       <h1 className="font-sora text-4xl font-semibold text-[#141414] video-ready">
         Your video is ready!
       </h1>
-      <FileName fileName={videoTitle} />
+      <FileName fileName={'recorded video'} />
       <div className="divider"></div>
       <label
         htmlFor="email"
@@ -60,7 +60,7 @@ const NewVideo = function ({ videoTitle, videoUrl, params }: NewVideoProps) {
         <ShareVideo logo="/whatsapp.svg" name="WhatsApp" />
         <ShareVideo logo="/telegram.svg" name="Telegram" />
       </section>
-      <VideoPlayer link="/video.mkv" />
+      <VideoPlayer link={params['video-id']} />
     </div>
   )
 }
