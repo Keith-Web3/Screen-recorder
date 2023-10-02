@@ -1,7 +1,3 @@
-'use client'
-
-import { useRef } from 'react'
-
 interface VideoPlayerProps {
   link: string
 }

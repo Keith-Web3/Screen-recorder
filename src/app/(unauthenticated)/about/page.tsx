@@ -1,9 +1,10 @@
+
 import Button from '@/components/ui/Button'
 import Image from 'next/image'
 
-interface AboutProps {}
 
-const About = function ({}: AboutProps) {
+
+const About = function () {
   return (
     <div className="about-page">
       <section>
