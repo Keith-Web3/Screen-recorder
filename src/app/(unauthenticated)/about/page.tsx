@@ -1,4 +1,5 @@
 import Button from '@/components/ui/Button'
+import Image from 'next/image'
 
 interface AboutProps {}
 
@@ -10,9 +11,9 @@ const About = function ({}: AboutProps) {
           show them, don't just tell them
         </h1>
         <div className="images">
-          <img src="/pic1.png" alt="old woman" />
-          <img src="/pic2.png" alt="Father and son" />
-          <img src="/pic3.png" alt="Young lady pressing her phone" />
+          <Image src="/pic1.png" alt="old woman" />
+          <Image src="/pic2.png" alt="Father and son" />
+          <Image src="/pic3.png" alt="Young lady pressing her phone" />
         </div>
         <p className="text-[#000000BF] text-lg mb-4 font-normal font-inter">
           Help your friends and loved ones by creating and sending videos on how
@@ -20,7 +21,7 @@ const About = function ({}: AboutProps) {
         </p>
         <Button>
           <span className="capitalize">Install HelpMeOut</span>
-          <img src="/arrow-right.svg" alt="arrow-right" />
+          <Image src="/arrow-right.svg" alt="arrow-right" />
         </Button>
       </section>
       <section>
@@ -28,10 +29,10 @@ const About = function ({}: AboutProps) {
           features
         </h2>
         <p>Key Highlights of Our Extension</p>
-        <img src="/video-repo.png" alt="video repo" />
+        <Image src="/video-repo.png" alt="video repo" />
         <div className="features">
           <div className="feature">
-            <img src="/record.svg" alt="record" />
+            <Image src="/record.svg" alt="record" />
             <h3>Simple Screen Recording</h3>
             <p>
               Effortless screen recording for everyone. Record with ease, no
@@ -39,7 +40,7 @@ const About = function ({}: AboutProps) {
             </p>
           </div>
           <div className="feature">
-            <img src="/send-2.svg" alt="send" />
+            <Image src="/send-2.svg" alt="send" />
             <h3>Easy-to-Share URL</h3>
             <p>
               Share your recordings instantly with a single link. No
@@ -47,7 +48,7 @@ const About = function ({}: AboutProps) {
             </p>
           </div>
           <div className="feature">
-            <img src="/revisit.svg" alt="revisit" />
+            <Image src="/revisit.svg" alt="revisit" />
             <h3>Revisit Recordings</h3>
             <p>
               Access and review your past content effortlessly. Your recordings,

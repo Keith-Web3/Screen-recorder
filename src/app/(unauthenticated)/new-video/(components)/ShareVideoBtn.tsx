@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface ShareVideoProps {
   logo: string
   name: string
@@ -6,7 +8,7 @@ interface ShareVideoProps {
 const ShareVideo = function ({ logo, name }: ShareVideoProps) {
   return (
     <button>
-      <img src={logo} alt={name + '-logo'} />
+      <Image src={logo} alt={name + '-logo'} />
       <span>{name}</span>
     </button>
   )

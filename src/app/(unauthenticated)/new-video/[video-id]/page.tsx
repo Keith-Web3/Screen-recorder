@@ -1,7 +1,7 @@
-import Button from '@/components/ui/Button'
 import FileName from '../(components)/FileName'
 import ShareVideo from '../(components)/ShareVideoBtn'
 import VideoPlayer from '../(components)/VideoPlayer'
+import Image from 'next/image'
 
 interface NewVideoProps {
   params: { 'video-id': string }
@@ -43,7 +43,7 @@ const NewVideo = function ({ params }: NewVideoProps) {
             https://www.helpmeout/Untitled_Video_20232509
           </p>
           <button>
-            <img src="/copy.svg" alt="copy-link" />
+            <Image src="/copy.svg" alt="copy-link" />
             <span>
               Copy <span>video link</span>
             </span>
